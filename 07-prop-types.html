@@ -3,6 +3,8 @@
   <script src="https://unpkg.com/react@16.12.0/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+  <!-- Creates a propTypes global variable: -->
   <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
   <script type="text/babel">
     const rootElement = document.getElementById('root')
@@ -14,6 +16,8 @@
         </div>
       )
     }
+
+    // Validates the type of props passed into your SayHello component:
     SayHello.propTypes = {
       firstName: PropTypes.string.isRequired,
       lastName: PropTypes.string.isRequired,

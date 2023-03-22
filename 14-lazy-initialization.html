@@ -5,6 +5,8 @@
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
     function Greeting() {
+
+// The useState hook provides the initial value for initial render of component, and then ignored for renders of the component thereafter. To combat the problem of wanting to only read into local storage on initial render OR when necessary, turn useState initial value into a function:
       const [name, setName] = React.useState(
         () => window.localStorage.getItem('name') || '',
       )

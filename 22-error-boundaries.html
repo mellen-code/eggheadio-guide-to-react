@@ -3,9 +3,16 @@
   <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+<!-- 3rd party library for Error Boundaries -->
   <script src="https://unpkg.com/react-error-boundary@1.2.5/dist/umd/react-error-boundary.js"></script>
   <script type="text/babel">
+
+// HANDLE REACT ERRORS WITHIN REACT CALLSTACK. ONLY CAN BE USED ON REACT RENDER METHODS & REACT USEEFFECT CALLBACKS.
+
+// NOT ON EVENT HANDLERS OR PROMISE HANDLERS (E.G. ASYNC CALLBACK)
+
     const ErrorBoundary = ReactErrorBoundary.ErrorBoundary
+
     // class ErrorBoundary extends React.Component {
     //   state = {error: null}
     //   static getDerivedStateFromError(error) {

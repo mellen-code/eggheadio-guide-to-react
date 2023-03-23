@@ -6,7 +6,10 @@
   <script type="text/babel">
     function UsernameForm() {
       function handleSubmit(event) {
+        
+// prevents full-page refresh:
         event.preventDefault()
+
         const username = event.target.elements.usernameInput.value
         alert(`You entered: ${username}`)
       }

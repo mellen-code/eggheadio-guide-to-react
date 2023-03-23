@@ -14,6 +14,7 @@
         return 0
       })
 
+// no dependencies listed, so it is called on every component render:
       React.useEffect(() => {
         console.log('%c    Child: useEffect no deps', 'color: LightCoral')
         return () => {
@@ -24,6 +25,7 @@
         }
       })
 
+// empty brackets as dependencies, so it is NOT called on component render because its dependencies do not change. It is run when the component is unmounted:
       React.useEffect(() => {
         console.log(
           '%c    Child: useEffect empty deps',
